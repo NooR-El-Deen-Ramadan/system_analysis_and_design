@@ -1,17 +1,17 @@
 name: github Actions demo
 on: push
 jobs: 
- run github actions demo:
- runs-on: ubuntu-latest
- steps: 
-  - name : print the trigering event
-    run: echo "the event that triggered this workflow is ${{github.event_name}}"
-  - name: print the os of the runner
-    run: echo "the operating system of the runner is ${{runner.os}}"
-  - name: print the branch that this workflow ran on
-    run: echo "the branch that this workflow ran on is ${{github.ref}}"
-  - name : checkout the repository
-    uses : actions/checkout@v4
-    run : echo "clonnig the ${{github.repository}} repository"
-  - name: list the files in the repository
-    run: ls ${{github.workspace}}
+ run_github_actions_demo:
+  runs-on: ubuntu-latest
+  steps: 
+       - name : print the trigering event
+         run: echo "the event that triggered this workflow is ${{github.event_name}}"
+       - name: print the os of the runner
+         run: echo "the operating system of the runner is ${{runner.os}}"
+       - name: print the branch that this workflow ran on
+         run: echo "the branch that this workflow ran on is ${{github.ref}}"
+       - name : checkout the repository
+         uses : actions/checkout@v4
+         run : echo "clonnig the ${{github.repository}} repository"
+       - name: list the files in the repository
+         run: ls ${{github.workspace}}

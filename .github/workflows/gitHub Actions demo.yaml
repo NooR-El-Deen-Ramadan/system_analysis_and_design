@@ -12,6 +12,7 @@ jobs:
          run: echo "the branch that this workflow ran on is ${{github.ref}}"
        - name : checkout the repository
          uses : actions/checkout@v4
+       - name : cloning repo  
          run : echo "clonnig the ${{github.repository}} repository"
        - name: list the files in the repository
          run: ls ${{github.workspace}}
